@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Netflix_clone.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="magicscroll/magicscroll.css" />
+    <script type="text/javascript" src="magicscroll/magicscroll.js"></script>
+    <script src="main.js" defer></script>
+    <link href="main.css" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet" />
+
+    <%-- <link href="movies.css" rel="stylesheet" />
+    <link href="tvShows.css" rel="stylesheet" />--%>
+    <%--<link href="popular.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="navbar">
+                <div class="nav">
+                    <div class="Netflix-logo">
+                        <a href="home.aspx">
+                            <img src="images/Netflix-logo.png" /></a>
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li class="link"><a href="tvShows.aspx">Tv Shows</a></li>
+                            <li class="link"><a href="movies.aspx">Movies</a></li>
+                            <li class="link"><a href="popular.aspx">New & Popular</a></li>
+                           <%-- <li class="link"><a href="favourite.aspx">Favourites</a></li>--%>
+                            <li class="link"><a href="contactUs.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="name">
+                        <asp:LinkButton ID="profileName" runat="server" OnClick="profileName_Click" ToolTip="Click here"></asp:LinkButton>
+                    </div>
+                    <div class="profileAction" id="profileAction" runat="server">
+                        <span id="btnClose"><i class="far fa-times-circle"></i></span>
+
+                    </div>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div class="footer">
+                <div class="footerMain">
+                    <div class="logo">
+                        <img src="images/Netflix-logo.png" />
+
+                    </div>
+                    <div class="links">
+                        <a href="home.aspx">Home</a>
+                        <a href="privacy.aspx">Privacy</a>
+                        <a href="contactUs.aspx">Contact Us</a>
+                        <a href="helpCenter.aspx">Help Center</a>
+
+                    </div>
+                   
+                </div>
+                <div class="footerSocial">
+                    <div class="icons">
+                        <a href="https://www.facebook.com/Netflix-clone-105419671913927/">
+                            <img src="images/social/facebook-icon.png" /></a>
+                        <a href="https://twitter.com/netflix_clone">
+                            <img src="images/social/twitter-icon.png" /></a>
+                        <a href="https://www.instagram.com/clone.netflix/">
+                            <img src="images/social/instagram-icon.png" /></a>
+                    </div>
+                    <div class="copyright">
+                       Copyrights ©2021. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

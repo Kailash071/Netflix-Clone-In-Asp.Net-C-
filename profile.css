@@ -1,0 +1,103 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Quicksand;
+   /* background-color:#000;*/
+   background:url(images/bg.jpg) no-repeat;
+   background-size:cover;
+    color:#000000;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+   /* border:1px solid red;*/
+}
+.content {
+    width: 384px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    fill: #000000;
+    background-color: rgba(0, 0, 0, 0.82);
+    border-radius:5px;
+    /* border: 1px solid red;*/
+}
+.contentUP {
+    width: 364px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    fill: #000000;
+    background-color: rgba(0, 0, 0, 0.82);
+    border-radius: 5px;
+}
+.content>h3{
+    font-size:2rem;
+    margin-bottom:10px;
+    cursor:none;
+    color:#FFFFFF;
+}
+.contentUP > h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    cursor: none;
+    color: #FFFFFF;
+}
+.updateLink{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+   /* border:1px solid red;*/
+    margin-top:10px;
+    margin-right:70px;
+}
+    .updateLink > #link_update_profile {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .updateLink > #link_update_profile:hover {
+        color:red;
+    }
+#txtName, #txtPassword, #txtEmail, #btnBack ,#btnUpdate{
+    width: 320px;
+    height: 50px;
+    padding: 15px;
+    outline: none;
+    margin-top: 20px;
+    border:1px solid black;
+    border-radius:5px;
+    
+}
+    #txtName, #txtPassword, #txtEmail{
+        font-family:Quicksand;
+        font-size:1rem;
+    }
+    #btnBack, #btnUpdate {
+        margin-top: 30px;
+        background-color: red;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }

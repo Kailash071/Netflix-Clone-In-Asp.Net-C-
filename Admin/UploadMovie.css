@@ -1,0 +1,74 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*,*:before,*:after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:black;
+    font-family:Quicksand;
+}
+.form-control{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+   
+}
+.buttons{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+}
+
+#lblTitle,#lblDescription,#lblCategory,#lblDirector,#lblActors,#lblProducer,#lblWatchTime,#lblReleaseDate,#lblRating,#lblPoster,#lblVideoLink{
+    font-size:1.4rem;
+    margin:5px;
+    color:white;
+}
+#txtTitle,#txtDescription,#DropDownCategory,#txtDirector,#txtActors,#txtProducer,#txtWatchTime,#txtReleaseDate,#DropDownRating,#PosterUpload,#txtVideoLink{
+    width:300px;
+    padding:8px 5px;
+    margin:5px;
+    background-color:#FFFF;
+    color:black;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    font-family:Quicksand;
+}
+#PosterUpload{
+    background-color:transparent;
+    color:white;
+  
+}
+#btnUpload,#btnReset,#btnUpdate{
+    padding:8px 12px;
+    margin:5px;
+    color:white;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:Quicksand;
+    letter-spacing:1px;
+    font-weight:600;
+    border-radius:5px;
+}
+#btnUpload , #btnUpdate{
+    background-color:rgb(222 17 17 / 0.90);
+}
+
+#btnReset{
+    margin-right:15px;
+    background-color:rgb(0 0 0 / 0.40);
+    transition:1s;
+}
+#btnReset:hover{
+    background-color:rgb(255 255 255 / 0.85);
+    color:black;
+}

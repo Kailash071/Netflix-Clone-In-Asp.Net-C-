@@ -1,0 +1,173 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /*width:100vw;*/
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body {
+    font-family: Quicksand;
+}
+
+/*main content*/
+.mainView {
+    width: 100%;
+    height: 500px;
+    overflow: visible;
+    z-index: 0;
+    margin-bottom: 10px;
+}
+
+    .mainView > img {
+        width: 100%;
+        height: 500px;
+        overflow: visible;
+        cursor: pointer;
+    }
+/*.mainView-title{
+    position:absolute;
+    left:50px;
+    top:400px;
+  
+   
+}
+
+.mainView-title >h1{
+    color:white;
+  font-size:3rem;
+    padding-bottom:10px;
+  
+}
+.mainView-title>div{
+    display:flex;
+    justify-content:flex-start;
+    align-content:center;
+    gap:20px;
+}
+.mainView-title>div>.play, .mainView-title>div>.info{
+    width:auto;
+   background-color:white;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   padding:3px;
+   border-radius:3px;
+   cursor:pointer;
+}
+.mainView-title>div>.info{
+    background-color:rgb(182 174 174 / 0.70);
+   
+
+}
+
+.play , .info {
+    display:flex;
+    gap:5px;
+    cursor:pointer;
+    border:0;
+    outline:0;
+    border-radius:5px;
+}
+.btnPlay , .btnInfo{
+    background-color:transparent;
+    border:0;
+    outline:0;
+    padding:0 3px;
+    font-size:1.1rem;
+    font-family:Quicksand;
+    cursor:pointer;
+}*/
+
+.onlyOnNetflix, .trendingNow, .sci-fi-movies, .romance-movies, .thriller-movies, .adventure-movies, .comedy-movies,.netflix-movies,.netflix-show,.movieRomance{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+ /*   border: 1px solid red;*/
+}
+
+    .onlyOnNetflix > .title, .trendingNow > .title, .sci-fi-movies > .title, .romance-movies > .title, .thriller-movies > .title,
+    .adventure-movies > .title, .comedy-movies > .title,.netflix-movies>.title,.netflix-show>.title,.movieRomance>.title {
+        margin-top: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 10px;
+        font-size: 1.2rem;
+        color: white !important;
+    }
+
+.posters {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #000000;
+    overflow: visible;
+}
+
+
+.posterImg > img {
+    width: 212px;
+    height: 110px;
+    border-radius:5px;
+    background-color: black;
+   margin-left:10px;
+}
+
+.posterImg:hover > img {
+    transform: scale(1.4);
+    border-radius: 15px;
+    /*border-top-left-radius: 10px;
+        border-top-right-radius: 10px;*/
+}
+
+/*poster info buttons,category*/
+
+.posterInfo {
+    width: 212px;
+    height: 30px;
+    display: flex;
+    background-color: red;
+}
+
+/*MagicScroll*/
+.MagicScroll {
+    background-color: #000000;
+}
+
+    .MagicScroll span > a, .MagicScroll div > span > a {
+        display: none;
+        color: black;
+    }
+
+.mcs-button {
+    background-color: #FFFFFF;
+  /*   border:1px solid red;*/
+}
+/*.MagicScroll-horizontal .mcs-button-arrow-next{
+    border:1px solid red;
+    
+}*/
+.MagicScroll > .mcs-button-arrow{
+    color:red;
+    background-color:transparent;
+}
+

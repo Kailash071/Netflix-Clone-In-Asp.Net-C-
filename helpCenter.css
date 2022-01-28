@@ -1,0 +1,86 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family:Quicksand;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    .container .title {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-bottom: 50px;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    }
+
+.cards{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    color:#000000;
+    align-items:center;
+}
+.call, .email, .privacy {
+    width: 270px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    gap: 10px;
+    padding:10px;
+    background-color: rgb(255 255 255 / 0.92);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 4px -4px 16px 8px rgb(255 255 255 / 0.22);
+}
+#btnCall,#btnPrivacy,#btnEmail {
+    width:100px;
+    text-align:center;
+    padding: 10px 12px;
+    margin-top:10px;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family:Quicksand;
+}
+    #btnCall:hover, #btnEmail:hover, #btnPrivacy:hover{
+        border-bottom:2px solid red;
+    }
+    #btnCall{
+        padding:0;
+    }
+    .btnCall a {
+        text-decoration: none;
+        color: #FFFFFF;
+        width:100%;
+      /*  border:1px solid red;*/
+       width:80px;
+       padding:10px 12px;
+    }
+    .call>h3,.privacy>h3,.email>h3{
+        border-bottom:1px solid red;
+        cursor:none;
+    }
+    

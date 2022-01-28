@@ -1,0 +1,404 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E185397-01F6-49E1-8AB8-69719617B6C9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Netflix_clone</RootNamespace>
+    <AssemblyName>Netflix-clone</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44353</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\deleteMovies.aspx" />
+    <Content Include="Admin\editMovies.aspx" />
+    <Content Include="Admin\editTvShow.aspx" />
+    <Content Include="Admin\moviesList.aspx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\tvShowsList.aspx" />
+    <Content Include="Admin\uploadMovie.aspx" />
+    <Content Include="Admin\UploadMovie.css" />
+    <Content Include="Admin\uploadTvShow.aspx" />
+    <Content Include="App_Data\mainDb.mdf" />
+    <Content Include="App_Data\mainDb_log.ldf">
+      <DependentUpon>mainDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="contactUs.aspx" />
+    <Content Include="contactUs.css" />
+    <Content Include="Admin\deleteTvShow.aspx" />
+    <Content Include="demo.aspx" />
+    <Content Include="favourite.aspx" />
+    <Content Include="favourite.css" />
+    <Content Include="forgetPassword.aspx" />
+    <Content Include="helpCenter.aspx" />
+    <Content Include="helpCenter.css" />
+    <Content Include="home.aspx" />
+    <Content Include="home.css" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\g-logo.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\logo-arpit.jpg" />
+    <Content Include="images\Netflix-logo.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\posters\money1.jpg" />
+    <Content Include="images\posters\money2.jpg" />
+    <Content Include="images\posters\money3.jpg" />
+    <Content Include="images\posters\money4.jpg" />
+    <Content Include="images\posters\money5.jpg" />
+    <Content Include="images\posters\money6.jpg" />
+    <Content Include="images\play.png" />
+    <Content Include="images\posters\money heist.jpg" />
+    <Content Include="images\posters\Movies\ff1.jpg" />
+    <Content Include="images\posters\Movies\ff2.jpg" />
+    <Content Include="images\posters\Movies\ff3.jpg" />
+    <Content Include="images\posters\Movies\ff4.jpg" />
+    <Content Include="images\posters\Movies\ff5.jpg" />
+    <Content Include="images\posters\Movies\ff6.jpg" />
+    <Content Include="images\posters\tvShows\friends1.jpg" />
+    <Content Include="images\posters\tvShows\friends2.jpg" />
+    <Content Include="images\posters\tvShows\friends3.jpg" />
+    <Content Include="images\posters\tvShows\friends4.jpg" />
+    <Content Include="images\posters\tvShows\friends5.jpg" />
+    <Content Include="images\posters\tvShows\friends6.jpg" />
+    <Content Include="images\social\facebook-icon.png" />
+    <Content Include="images\social\instagram-icon.png" />
+    <Content Include="images\social\twitter-icon.png" />
+    <Content Include="images\step-1.png" />
+    <Content Include="logOut.aspx" />
+    <Content Include="magicscroll\magicscroll.css" />
+    <Content Include="magicscroll\magicscroll.js" />
+    <Content Include="main.css" />
+    <Content Include="main.js" />
+    <Content Include="movies.aspx" />
+    <Content Include="movies.css" />
+    <Content Include="popular.aspx" />
+    <Content Include="popular.css" />
+    <Content Include="privacy.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="profile.css" />
+    <Content Include="signIn.aspx" />
+    <Content Include="signUp.css" />
+    <Content Include="signUp1.aspx" />
+    <Content Include="signUp2.aspx" />
+    <Content Include="signUp3.aspx" />
+    <Content Include="signIn.css" />
+    <Content Include="tvShows.aspx" />
+    <Content Include="tvShows.css" />
+    <Content Include="updateProfile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\deleteMovies.aspx.cs">
+      <DependentUpon>deleteMovies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteMovies.aspx.designer.cs">
+      <DependentUpon>deleteMovies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editMovies.aspx.cs">
+      <DependentUpon>editMovies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\editMovies.aspx.designer.cs">
+      <DependentUpon>editMovies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editTvShow.aspx.cs">
+      <DependentUpon>editTvShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\editTvShow.aspx.designer.cs">
+      <DependentUpon>editTvShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\moviesList.aspx.cs">
+      <DependentUpon>moviesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\moviesList.aspx.designer.cs">
+      <DependentUpon>moviesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tvShowsList.aspx.cs">
+      <DependentUpon>tvShowsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tvShowsList.aspx.designer.cs">
+      <DependentUpon>tvShowsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uploadMovie.aspx.cs">
+      <DependentUpon>uploadMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\uploadMovie.aspx.designer.cs">
+      <DependentUpon>uploadMovie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uploadTvShow.aspx.cs">
+      <DependentUpon>uploadTvShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\uploadTvShow.aspx.designer.cs">
+      <DependentUpon>uploadTvShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactUs.aspx.cs">
+      <DependentUpon>contactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactUs.aspx.designer.cs">
+      <DependentUpon>contactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteTvShow.aspx.cs">
+      <DependentUpon>deleteTvShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteTvShow.aspx.designer.cs">
+      <DependentUpon>deleteTvShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="favourite.aspx.cs">
+      <DependentUpon>favourite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="favourite.aspx.designer.cs">
+      <DependentUpon>favourite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgetPassword.aspx.cs">
+      <DependentUpon>forgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgetPassword.aspx.designer.cs">
+      <DependentUpon>forgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="helpCenter.aspx.cs">
+      <DependentUpon>helpCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="helpCenter.aspx.designer.cs">
+      <DependentUpon>helpCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logOut.aspx.cs">
+      <DependentUpon>logOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logOut.aspx.designer.cs">
+      <DependentUpon>logOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="movies.aspx.cs">
+      <DependentUpon>movies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movies.aspx.designer.cs">
+      <DependentUpon>movies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="popular.aspx.cs">
+      <DependentUpon>popular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popular.aspx.designer.cs">
+      <DependentUpon>popular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy.aspx.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy.aspx.designer.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signIn.aspx.cs">
+      <DependentUpon>signIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signIn.aspx.designer.cs">
+      <DependentUpon>signIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signUp1.aspx.cs">
+      <DependentUpon>signUp1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUp1.aspx.designer.cs">
+      <DependentUpon>signUp1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signUp2.aspx.cs">
+      <DependentUpon>signUp2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUp2.aspx.designer.cs">
+      <DependentUpon>signUp2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signUp3.aspx.cs">
+      <DependentUpon>signUp3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUp3.aspx.designer.cs">
+      <DependentUpon>signUp3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tvShows.aspx.cs">
+      <DependentUpon>tvShows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tvShows.aspx.designer.cs">
+      <DependentUpon>tvShows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateProfile.aspx.cs">
+      <DependentUpon>updateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateProfile.aspx.designer.cs">
+      <DependentUpon>updateProfile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.Master" />
+    <Content Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\upload\poster\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58922</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44353/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
